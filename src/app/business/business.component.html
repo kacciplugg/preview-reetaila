@@ -1,0 +1,244 @@
+<app-navbar
+  class="bg-white md:pt-6 md:pb-3.5"
+  mobileClass="bg-white"
+></app-navbar>
+<section
+  class="w-full h-screen relative md:h-[100vh] bg-no-repeat bg-cover bg-center bg-hero-cloth"
+>
+  <div
+    class="absolute h-full md:block inset-0 bg-gradient-to-l from-transparent to-[#121212]"
+  >
+    <div class="flex md:block h-full items-center justify-center">
+      <div
+        class="h-[80%] md:h-auto w-full md:w-1/2 px-4 md:mx-28 md:mt-60 z-20"
+      >
+        <p
+          class="text-5xl sm:text-5xl md:text-5xl xl:text-6xl text-white font-semibold md:leading-[65px]"
+        >
+          Start selling your stuff online with your very own
+          <span class="text-secondary">business website!</span>
+        </p>
+        <p class="text-white md:text-lg pt-4">
+          Without the help of a developer or technical knowledge, you too can
+          create your own e-commerce website and start selling to your customers
+          wherever they are!
+        </p>
+
+        <div class="flex md:w-2/3 items-center justify-start gap-5">
+          <a routerLink="/waitlist">
+            <button
+              class="border-0 mt-7 py-5 md:px-7 px-3.5 rounded-lg bg-secondary text-white flex items-center"
+            >
+              Join the Waitlist
+              <span class="pl-2 align-middle sm:pt-3px"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-4 h-auto"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </span>
+            </button>
+          </a>
+          <a routerLink="/pending">
+            <button
+              class="border-2 border-white mt-7 py-4 md:px-7 px-3.5 rounded-lg text-white flex items-center"
+            >
+              Learn More
+              <span class="pl-2 align-middle sm:pt-3px"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-4 h-auto"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="md:flex body-font bg-white w-full h-auto md:py-20 py-14 md:px-20 px-4"
+>
+  <div class="md:w-2/4 p-4">
+    <p class="text-3xl md:text-[4vw] leading-[1] font-semibold">
+      It's really easy to setup
+      <span class="text-secondary">even you can do it!</span>
+    </p>
+    <p class="md:text-lg xl:text-xl pt-4">
+      We carefully created an easy and seamless signup and website creation
+      process so you can quickly reigster your business and setup your online
+      store in minutes
+    </p>
+    <div class="my-5">
+      <ng-container
+        *ngFor="
+          let item of [
+            'Effortless store setup',
+            'Inventory management made easy',
+            'Order management simplified',
+            'Affordable plans for every business',
+            'Support that cares'
+          ]
+        "
+      >
+        <div
+          class="flex py-2 px-2 text-sm md:text-base font-normal md:font-semibold items-center gap-3 text-center"
+        >
+          <app-forward-icon class="w-3 h-auto"></app-forward-icon>
+          <p>{{ item }}</p>
+        </div>
+      </ng-container>
+
+      <div
+        class="flex py-2 px-2 text-secondary text-sm md:text-base font-normal md:font-semibold items-center gap-3 text-center"
+      >
+        <app-forward-icon class="w-3 h-auto"></app-forward-icon>
+        <p>Start selling to your customers online!</p>
+      </div>
+    </div>
+
+    <a routerLink="/pending">
+      <button
+        class="border-2 bg-primary border-white mt-7 py-4 px-7 rounded-xl text-white sm:text-sm text-xs flex"
+      >
+        Create my store
+        <span class="pl-2 align-middle sm:pt-3px"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-4 h-auto"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </span>
+      </button>
+    </a>
+  </div>
+  <div class="hidden md:block md:w-2/4 relative p-4">
+    <div
+      class="md:mb-0 overflow-hidden 7 bg-white rounded-3xl h-full py-10 px-8"
+    >
+      <div
+        class="flex items-end bg-lady-phone bg-center md:mt-28 w-[400px] h-[400px] rounded-3xl bg-cover bg-no-repeat"
+      >
+        <div
+          class="flex px-4 py-4 bg-white items-center gap-4 rounded-xl m-5 w-full"
+        >
+          <div class="bg-secondary text-white rounded-full p-3">
+            <app-mark-icon></app-mark-icon>
+          </div>
+          <div>
+            <p>Store setup successful!</p>
+            <p class="text-gray-500 text-xs">
+              You can now start selling to your customers
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-frame-1 absolute top-0 right-0 bg-center w-[350px] h-[400px] rounded-3xl bg-cover bg-no-repeat"
+      ></div>
+    </div>
+  </div>
+</section>
+
+<section class="w-full h-3/4 bg-white md:py-20 py-14 md:px-20 px-4">
+  <div
+    class="flex flex-wrap justify-center bg-white gap-6 sm:gap-8 md:gap-10 xl:gap-12"
+  >
+    <div class="flex flex-col gap-4 bg-[#EBEEF6] w-[600px] p-8 rounded-2xl">
+      <div
+        class="flex items-center justify-center text-white rounded-full p-3 w-14 h-14 md:w-20 md:h-20"
+      >
+        <img src="../../assets/icons/shop.svg" alt="reetaila logo" />
+      </div>
+      <h2 class="text-3xl leading-[1.2]">
+        Get on board the new way to sell your market online
+      </h2>
+      <p class="text-default">
+        Jump over to the easy side of your business life by migrating your
+        market to the internet space. Get visibility and sell to customers all
+        over the world
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4 bg-[#E6FCEF] w-[600px] p-8 rounded-2xl">
+      <div
+        class="flex items-center justify-center text-white rounded-full p-3 w-14 h-14 md:w-20 md:h-20"
+      >
+        <img src="../../assets/icons/briefcase.svg" alt="reetaila logo" />
+      </div>
+      <h2 class="text-3xl leading-[1.2]">
+        Manage your business like a proper professional
+      </h2>
+      <p class="text-default">
+        With a specialized and intuitive inventory management system tailored to
+        meet yor needs, you can now take control of your stock right on your
+        palms.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4 bg-[#E6FCEF] w-[600px] p-8 rounded-2xl">
+      <div
+        class="flex items-center justify-center text-white rounded-full p-3 w-14 h-14 md:w-20 md:h-20"
+      >
+        <img src="../../assets/icons/dollar.svg" alt="reetaila logo" />
+      </div>
+
+      <h2 class="text-3xl">Recieve payments from multiple channels</h2>
+      <p class="text-default">
+        Your customers are now blessed with the option of paying for goods
+        wherever they are in, whatever method they prefer! Talk about ease.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4 bg-[#EBEEF6] w-[600px] p-8 rounded-2xl">
+      <div
+        class="flex items-center justify-center text-white rounded-full p-3 w-14 h-14 md:w-20 md:h-20"
+      >
+        <img src="../../assets/icons/microphone.svg" alt="reetaila logo" />
+      </div>
+      <h2 class="text-3xl leading-[1.2]">
+        Announce your presence in style on the public scene
+      </h2>
+      <p class="text-default">
+        We're listing selected products from top performing businesses on our
+        marketplace! You too can get your stuff showcased to thousands of
+        shoppers daily.
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-newsletter></app-newsletter>
+<app-banner></app-banner>
+<app-footer></app-footer>

@@ -1,1 +1,148 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+body {
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    position: relative;
+    touch-action: pan-y pinch-zoom;
+  }
+}
+
+.bg-image1 {
+  background-image: url("./assets/homebg1.png");
+}
+
+@media (min-width: 640px) {
+  .bg-image2 {
+    background-image: url("./assets/homebg2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .bg-image2 {
+    background-image: url("./assets/homebg2-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.bg-image3 {
+  background-image: url("./assets/homebg3.png");
+}
+
+.bg-image4 {
+  background-image: url("./assets/medium-shot-man-repairing-fashion-goods 1.png");
+  background-size: cover;
+}
+
+.bg-image5 {
+  background-image: url("./assets/onboarding-img1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-image6 {
+  background-image: url("./assets/onboarding-img2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-image7 {
+  background-image: url("./assets/onboarding-img3.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonial1 {
+  background-image: url("./assets/testimonial1.png");
+  background-size: cover;
+}
+
+.testimonial2 {
+  background-image: url("./assets/testimonial2.png");
+  background-size: cover;
+}
+
+.testimonial3 {
+  background-image: url("./assets/testimonial3.png");
+  background-size: cover;
+}
+
+.testimonial4 {
+  background-image: url("./assets/testimonial4.png");
+  background-size: cover;
+}
+
+.product-image1 {
+  background-image: url("./assets/productImage1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-image2 {
+  background-image: url("./assets/productImage2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-image3 {
+  background-image: url("./assets/productImage3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-image4 {
+  background-image: url("./assets/productImage4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.product-image5 {
+  background-image: url("./assets/productImage5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.progress-bar::-webkit-progress-value {
+  background-color: #4caf50;
+}
+
+.progress-bar::-moz-progress-bar {
+  background-color: #4caf50;
+}
+
+.progress-bar {
+  background: #dedede;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}

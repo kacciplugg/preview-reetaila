@@ -1,0 +1,45 @@
+<section class="w-full flex flex-wrap py-14 md:py-20 px-4 md:px-0">
+  <div
+    class="w-full md:w-5/12 h-[35vh] sm:h-[50] md:h-[55vh] bg-contain sm:bg-cover md:bg-cover bg-top bg-no-repeat bg-fashion-main order-2 md:order-1 rounded-xl md:rounded-none md:rounded-tr-3xl md:rounded-br-3xl"
+  ></div>
+  <div class="md:w-6/12 order-1 md:order-2 md:pl-14">
+    <p
+      class="text-3xl md:text-[3vw] xl:text-[3.5vw] leading-[1] md:leading-[1.1] font-semibold"
+    >
+      Smart businesses
+      <span class="text-secondary typed"></span><br />
+      with Reetaila
+    </p>
+    <p class="text-base pt-4 mb-6">
+      We empower small Businesses with tools to seamlessly launch, scale and
+      succeed online. Whether you're building a new store, growing your
+      audience, or thriving in sales, we make every step
+      <i>simple and impactful</i>.
+    </p>
+    <div class="my-5">
+      <ng-container
+        *ngFor="
+          let item of [
+            'Effortless store setup',
+            'Inventory management made easy',
+            'Order management simplified',
+            'Affordable plans for every business',
+            'Support that cares'
+          ]
+        "
+      >
+        <div
+          class="flex py-2 px-2 text-sm md:text-base font-normal md:font-semibold items-center gap-3 text-center"
+        >
+          <app-mark-icon class="w-5 h-5"></app-mark-icon>
+          <p>{{ item }}</p>
+        </div>
+      </ng-container>
+    </div>
+    <a routerLink="/pending" class="mr-6 mb-3">
+      <app-button text="Join the Waitlist" class="bg-primary text-white">
+        <app-forward-icon></app-forward-icon>
+      </app-button>
+    </a>
+  </div>
+</section>

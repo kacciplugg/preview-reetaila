@@ -1,0 +1,19 @@
+<div
+  class="bg-hero-pattern-mobile md:bg-hero-pattern h-[100vh] md:h-[120vh] bg-cover w-full md:bg-cover absolute top-0 -z-30 bg-no-repeat"
+></div>
+<app-navbar
+  [ngClass]="{
+    'bg-white shadow-md': isScrolled,
+    'bg-transparent': !isScrolled
+  }"
+></app-navbar>
+<app-hero></app-hero>
+<app-companion></app-companion>
+<app-smart-business></app-smart-business>
+<app-why-us></app-why-us>
+<!-- <app-testimonies></app-testimonies> -->
+<app-products></app-products>
+<app-features></app-features>
+<app-newsletter></app-newsletter>
+<app-banner></app-banner>
+<app-footer></app-footer>

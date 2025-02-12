@@ -1,0 +1,81 @@
+<app-navbar
+  class="bg-white md:pt-6 md:pb-3.5"
+  mobileClass="bg-white"
+></app-navbar>
+<section
+  class="w-full h-screen relative md:h-[100vh] bg-no-repeat bg-cover bg-center bg-hero-cover"
+>
+  <div
+    class="absolute h-full md:block inset-0 bg-gradient-to-l from-transparent to-[#121212]"
+  >
+    <div class="flex md:block h-full items-center justify-center">
+      <div
+        class="h-[80%] md:h-auto w-full md:w-1/2 px-4 md:mx-28 md:mt-60 z-20"
+      >
+        <p
+          class="text-5xl sm:text-5xl md:text-5xl xl:text-6xl text-white font-semibold md:leading-[65px]"
+        >
+          Hang tight —
+          <span class="text-secondary">we're working on that...</span>
+        </p>
+        <p class="text-white sm:text-xl text-base pt-4">
+          We're crafting something amazing for you. While we put the finishing
+          touches on this page, feel free to explore other parts of Reetaila.
+          Stay tuned—this space will be worth the wait!
+        </p>
+
+        <div class="flex md:w-1/2 justify-between">
+          <a routerLink="/waitlist">
+            <button
+              class="border-0 mt-7 py-4 px-7 rounded-lg bg-secondary text-white flex items-center"
+            >
+              Join the Waitlist
+              <span class="pl-2 align-middle sm:pt-3px"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-4 h-auto"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </span>
+            </button>
+          </a>
+          <a routerLink="/pending">
+            <button
+              class="border-2 border-white mt-7 py-4 px-7 rounded-lg text-white flex items-center"
+            >
+              Learn More
+              <span class="pl-2 align-middle sm:pt-3px"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-4 h-auto"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-newsletter></app-newsletter>
+<app-banner></app-banner>
+<app-footer></app-footer>

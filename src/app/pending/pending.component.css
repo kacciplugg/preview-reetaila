@@ -1,0 +1,19 @@
+.bg-cover {
+  background-image: url(../../assets/hero_comingsoon.jpg);
+  background-size: cover;
+  height: 120vh;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-cover {
+    background-image: url(../../assets/hero_comingsoon_mobile.jpg);
+    height: 80vh;
+  }
+  .pending-hero {
+    margin: 200px 20px 0px 20px;
+  }
+  .pending-hero-title {
+    font-size: 40px;
+    line-height: 2.8rem;
+  }
+}

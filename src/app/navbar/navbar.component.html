@@ -1,0 +1,752 @@
+<header
+  class="fixed top-0 left-0 right-0 w-full bg-white z-50 text-gray-600 body-font font-sans shadow-md"
+>
+  <div
+    class="hidden md:inline-flex w-full flex-wrap md:px-40 md:py-9 flex-col md:flex-row items-center justify-between"
+  >
+    <div>
+      <a
+        routerLink="/"
+        class="flex title-font font-medium items-center mb-4 md:mb-0"
+      >
+        <img src="../../assets/reetaila_logo.png" class="max-w-40 h-auto" />
+      </a>
+    </div>
+    <div>
+      <nav
+        class="md:ml-auto md:mr-auto flex flex-wrap items-center font-medium text-2x1 justify-center"
+      >
+        <div class="relative group">
+          <a
+            class="flex justify-center gap-2 items-center mr-10 hover:text-gray-900 py-5 cursor-pointer"
+          >
+            Solutions
+            <app-dropdown-icon></app-dropdown-icon>
+          </a>
+          <div
+            class="absolute hidden group-hover:flex bg-white menu-shadow rounded-3xl p-5 w-[800px]"
+            style="left: -151px"
+          >
+            <div class="flex flex-wrap px-1">
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_1.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">
+                      Business Website
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Get a fully functional e-commerce website and start
+                      selling to thousands of customers wherever in the world.
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_2.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">
+                      Inventory Management
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Start keeping track of all items in your store with an
+                      easy-to-use inventory management system.
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_3.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">
+                      Analytic Tools
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Do business the right way! Monitor sales, measure
+                      incomings and analyse web visibility for your business.
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_4.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">
+                      Marketplace
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Our online marketplace gives your business an opportunity
+                      to stand out in the crowd and attract more customers.
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_5.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">
+                      Online Payments
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Accept payments on your business' website from wherever
+                      your customers are in the world, safely and seamlessly.
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_6.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">
+                      Invoices & Receipts
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Take control of your operations; issue invoices and
+                      receipts to customers easily from the comfort of your
+                      phone!
+                    </p>
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative group">
+          <a
+            class="flex justify-center gap-2 items-center mr-10 hover:text-gray-900 py-5 cursor-pointer"
+          >
+            Company
+            <app-dropdown-icon></app-dropdown-icon>
+          </a>
+          <div
+            class="absolute hidden group-hover:flex bg-white menu-shadow rounded-3xl p-5 w-[800px]"
+            style="left: -282px"
+          >
+            <div class="flex flex-wrap px-1">
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_7.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">About Us</p>
+                    <p class="text-sm text-gray-500">
+                      Get to know everything behind Reetaila, our story, team
+                      and the mindset that propels us forward.
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_8.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">Careers</p>
+                    <p class="text-sm text-gray-500">
+                      Do you think you're a right fit for our team of experts?
+                      Check out available openings in your position of interest.
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_9.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">Press</p>
+                    <p class="text-sm text-gray-500">
+                      We're in the news! See what your favourite outlets and
+                      houses have to say about us.
+                    </p>
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          routerLink="/pending"
+          class="flex justify-center gap-2 items-center mr-10 hover:text-gray-900 py-5 cursor-pointer"
+        >
+          Pricing
+        </a>
+        <div class="relative group">
+          <a
+            class="flex justify-center gap-2 items-center mr-10 hover:text-gray-900 py-5 cursor-pointer"
+          >
+            Help
+            <app-dropdown-icon></app-dropdown-icon>
+          </a>
+          <div
+            class="absolute hidden group-hover:flex bg-white menu-shadow rounded-3xl p-5 w-[800px]"
+            style="left: -417px"
+          >
+            <div class="flex flex-wrap px-1">
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_11.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">Contact Us</p>
+                    <p class="text-sm text-gray-500">
+                      Got any complaints, inquiries or suggestions? Reach out to
+                      us and someone will shortly be with you!
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_12.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">FAQs</p>
+                    <p class="text-sm text-gray-500">
+                      Get quick answers to the questions we know have been on
+                      your mind.
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_13.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">Live Chat</p>
+                    <p class="text-sm text-gray-500">
+                      Connect with an agent online in real time to get
+                      assistance on whatever issues or questions you may have.
+                    </p>
+                  </div></a
+                >
+              </div>
+              <div class="w-1/2">
+                <a
+                  routerLink="/pending"
+                  class="flex items-start gap-5 px-4 py-5 text-gray-800 hover:bg-gray-100 hover:rounded-xl"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_14.svg"
+                    class="w-8 h-auto pt-1"
+                  />
+                  <div>
+                    <p class="text-primary text-xl font-semibold">
+                      Payment Errors
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Our payment errors guide provide insight and
+                      troubleshooting steps on the most likely payment errors
+                      you may encounter.
+                    </p>
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <a routerLink="/onboarding" class="mr-10 hover:text-gray-900">Sign In</a>
+      <a
+        routerLink="/waitlist"
+        class="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
+      >
+        Join Waitlist
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="w-full">
+    <div
+      class="flex justify-between pt-3 pb-[-20px] mr-[-3px]"
+      [ngClass]="{ 'fixed top-0 left-0 right-0 bg-white z-40': isMenuOpen }"
+    >
+      <a
+        routerLink="/"
+        class="md:hidden flex title-font font-medium items-center px-6 py-4 mb-4 md:mb-0"
+      >
+        <img src="../../assets/reetaila_logo.png" class="max-w-32 h-auto" />
+      </a>
+      <button
+        class="inline-flex mr-6 mt-5 cursor-pointer text-1xl md:hidden"
+        (click)="toggleMenu()"
+      >
+        <img
+          *ngIf="!isMenuOpen"
+          src="../../assets/nav-collapse-trigger.svg"
+          class="w-10 h-10 mt-[-10px] mr-1"
+        />
+        <img
+          *ngIf="isMenuOpen"
+          src="../../assets/close-icon.svg"
+          class="w-16 h-16 mt-[-20px] mr-[-15px]"
+        />
+      </button>
+    </div>
+    <nav
+      class="md:hidden text-xl mt-20 px-6 pb-5 bg-white w-full h-[100vh] fixed mobile-nav"
+      style="z-index: 30"
+      [ngClass]="{ hide: !isMenuOpen }"
+      aria-label="main"
+    >
+      <ul class="w-full overflow-y-auto nav-menu" style="max-height: 65vh">
+        <li class="py-2" (click)="toggleMenuItem()">
+          <a
+            class="cursor-pointer text-xl text-primary font-semibold flex gap-3"
+            >Solutions
+            <img
+              *ngIf="!isMenuItemOpen"
+              src="../../assets/menu-item-close.svg"
+              class="mt-[2px]"
+              alt=""
+            />
+            <img
+              *ngIf="isMenuItemOpen"
+              src="../../assets/menu-item-open.svg"
+              class="mt-[2px]"
+              alt=""
+            />
+          </a>
+          <nav
+            class="text-xl mt-5 h-auto bg-white w-full"
+            [ngClass]="{ hidden: !isMenuItemOpen }"
+            aria-label="main"
+          >
+            <ul>
+              <li class="py-2 flex" (click)="toggleMenuItem()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_1.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Business Website</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Get a fully functional e-commerce website and start
+                      selling to thousands of customers wherever in the world.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_2.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Inventory Management</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Start keeping track of all items in your store with an
+                      easy-to-use inventory management system.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_3.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Analytic Tools</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Do business the right way! Monitor sales, measure
+                      incomings and analyse web visibility for your business.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_4.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Marketplace</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Our online marketplace gives your business an opportunity
+                      to stand out in the crowd and attract more customers.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_5.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Online Payments</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Accept payments on your business' website from wherever
+                      your customers are in the world, safely and seamlessly.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_6.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Invoices & Receipts</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Take control of your operations; issue invoices and
+                      receipts to customers easily from the comfort of your
+                      phone!
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </li>
+        <li class="py-2" (click)="toggleMenuItem2()">
+          <a
+            class="cursor-pointer text-xl text-primary font-semibold flex gap-3"
+            >Company
+            <img
+              *ngIf="!isMenuItem2Open"
+              src="../../assets/menu-item-close.svg"
+              class="mt-[2px]"
+              alt=""
+            />
+            <img
+              *ngIf="isMenuItem2Open"
+              src="../../assets/menu-item-open.svg"
+              class="mt-[2px]"
+              alt=""
+            />
+          </a>
+          <nav
+            class="text-xl mt-5 h-auto bg-white w-full"
+            [ngClass]="{ hidden: !isMenuItem2Open }"
+            aria-label="main"
+          >
+            <ul>
+              <li class="py-2 flex" (click)="toggleMenuItem2()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_7.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">About Us</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Get to know everything behind Reetaila, our story, team
+                      and the mindset that propels us forward.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem2()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_8.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Careers</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Do you think you're a right fit for our team of experts?
+                      Check out available openings in your position of interest.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem2()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_9.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Press</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      We're in the news! See what your favourite outlets and
+                      houses have to say about us.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </li>
+        <li class="py-2" (click)="toggleMenu()">
+          <a
+            routerLink="/pending"
+            class="hover:opacity-90 text-xl text-primary font-semibold"
+            >Pricing</a
+          >
+        </li>
+        <li class="py-2" (click)="toggleMenuItem3()">
+          <a
+            class="cursor-pointer text-xl text-primary font-semibold flex gap-3"
+            >Help
+            <img
+              *ngIf="!isMenuItem2Open"
+              src="../../assets/menu-item-close.svg"
+              class="mt-[2px]"
+              alt=""
+            />
+            <img
+              *ngIf="isMenuItem2Open"
+              src="../../assets/menu-item-open.svg"
+              class="mt-[2px]"
+              alt=""
+            />
+          </a>
+          <nav
+            class="text-xl mt-5 h-auto bg-white w-full"
+            [ngClass]="{ hidden: !isMenuItem3Open }"
+            aria-label="main"
+          >
+            <ul>
+              <li class="py-2 flex" (click)="toggleMenuItem3()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_11.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Contact Us</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Got any complaints, inquiries or suggestions? Reach out to
+                      us and someone will shortly be with you!
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem3()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_12.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">FAQs</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Get quick answers to the questions we know have been on
+                      your mind.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem3()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_13.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Live Chat</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Connect with an agent online in real time to get
+                      assistance on whatever issues or questions you may have.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="py-2 flex" (click)="toggleMenuItem3()">
+                <a
+                  routerLink="/pending"
+                  class="text-primary flex items-start gap-3"
+                >
+                  <img
+                    src="../../assets/icon_reetaila_14.svg"
+                    class="w-8 h-auto"
+                    alt=""
+                  />
+                  <div>
+                    <p class="text-xl font-semibold">Payment Errors</p>
+                    <p class="text-xs text-gray-400 pt-1">
+                      Our payment errors guide provide insight and
+                      troubleshooting steps on the most likely payment errors
+                      you may encounter.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </li>
+        <li
+          class="py-2 flex justify-between items-center"
+          (click)="toggleMenu()"
+        >
+          <div class="w-1/4">
+            <a
+              routerLink="/onboarding"
+              class="text-xl text-primary font-semibold"
+              >Sign In</a
+            >
+          </div>
+
+          <div class="w-3/4">
+            <a
+              routerLink="/waitlist"
+              class="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            >
+              Join Waitlist
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Add a spacer div after the header to prevent content from hiding under navbar -->
+<div class="h-[100px] md:h-[140px]"></div>

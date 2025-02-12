@@ -1,0 +1,222 @@
+<app-navbar
+  class="bg-white md:pt-6 md:pb-3.5"
+  mobileClass="bg-white"
+></app-navbar>
+<section
+  class="w-full h-screen relative md:h-[100vh] bg-no-repeat bg-cover bg-center bg-hero-warehouse"
+>
+  <div
+    class="absolute h-full md:block inset-0 bg-gradient-to-l from-transparent to-[#121212]"
+  >
+    <div class="flex md:block h-full items-center justify-center">
+      <div
+        class="h-[80%] md:h-auto w-full md:w-1/2 px-4 md:mx-28 md:mt-60 z-20"
+      >
+        <p
+          class="text-5xl sm:text-5xl md:text-5xl xl:text-6xl text-white font-semibold md:leading-[65px]"
+        >
+          Effortless inventory management for
+          <span class="text-secondary">growing businesses!</span>
+        </p>
+        <p class="text-white md:text-lg pt-4">
+          Keep your stock in check with automated solutions that simplify
+          inventory tracking helping your business stay efficient and organized.
+        </p>
+
+        <div class="flex md:w-2/3 items-center justify-start gap-5">
+          <a routerLink="/waitlist">
+            <button
+              class="border-0 mt-7 py-5 md:px-7 px-3.5 rounded-lg bg-secondary text-white flex items-center"
+            >
+              Join the Waitlist
+              <span class="pl-2 align-middle sm:pt-3px"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-4 h-auto"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </span>
+            </button>
+          </a>
+          <a routerLink="/pending">
+            <button
+              class="border-2 border-white mt-7 py-4 md:px-7 px-3.5 rounded-lg text-white flex items-center"
+            >
+              Learn More
+              <span class="pl-2 align-middle sm:pt-3px"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="w-4 h-auto"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="md:flex relative body-font bg-white w-full h-auto md:py-20 py-14 md:px-20 px-4 text-default"
+>
+  <div class="md:w-2/4 md:p-4">
+    <p class="text-3xl md:text-[4vw] leading-[1] font-semibold">
+      Simplify your inventory,
+      <span class="text-secondary">amplify your success!</span>
+    </p>
+    <p class="md:text-lg xl:text-xl pt-4">
+      Discover the smarter way to manage your stock. Reetaila's invenotry
+      management tools ensure your business stays organized, efficient and
+      always ready for the next big sale.
+    </p>
+    <div class="my-5">
+      <ng-container *ngFor="let item of inventoryFeatures">
+        <div
+          class="flex py-2 px-2 text-sm md:text-base font-semibold items-center gap-3"
+        >
+          <app-forward-icon class="w-3 h-auto"></app-forward-icon>
+          <p>
+            {{ item.title }}: <span class="font-light">{{ item.text }}</span>
+          </p>
+        </div>
+      </ng-container>
+    </div>
+
+    <a routerLink="/pending">
+      <button
+        class="border-2 my-7 bg-primary border-white mt-7 py-4 px-7 rounded-xl text-white sm:text-sm text-xs flex"
+      >
+        Create my store
+        <span class="pl-2 align-middle sm:pt-3px"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-4 h-auto"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </span>
+      </button>
+    </a>
+  </div>
+  <div class="w-full md:w-2/4 relative md:p-4">
+    <div
+      class="flex items-end bg-lady-glasses bg-center w-full h-[400px] md:h-full rounded-3xl bg-cover bg-no-repeat"
+    ></div>
+  </div>
+</section>
+
+<section
+  class="w-full bg-[#121212] h-3/4 md:py-20 py-14 md:px-20 px-4 text-default"
+>
+  <div class="flex flex-col gap-6 md:my-6 justify-center items-center">
+    <h2
+      class="text-4xl sm:text-4xl md:text-5xl lg:text-6xl self-center text-center md:w-1/2"
+    >
+      Seamless inventory management <span class="text-white">in 3 steps</span>
+    </h2>
+    <p class="md:w-1/2 text-center">
+      Getting started is quick and intuitive. With just a few clicks, you can
+      streamline your stock management and focus on growing your business with
+      confidence
+    </p>
+  </div>
+  <div
+    class="flex mt-12 flex-wrap md:flex-nowrap justify-center text-white gap-4 sm:gap-6 md:gap-8 xl:gap-10"
+  >
+    <div class="flex flex-col gap-4 bg-[#2F2F2F] p-8 rounded-2xl">
+      <div
+        class="flex items-center justify-center text-white rounded-full p-3 w-14 h-14 md:w-20 md:h-20"
+      >
+        <img
+          src="../../assets/icons/shopping-bag-add.svg"
+          alt="reetaila logo"
+        />
+      </div>
+      <h2 class="text-3xl leading-[1.2]">Set up your products</h2>
+      <p>Upload your products, assign categories, and set stock levels.</p>
+    </div>
+
+    <div class="flex flex-col gap-4 bg-[#2F2F2F] p-8 rounded-2xl">
+      <div
+        class="flex items-center justify-center text-white rounded-full p-3 w-14 h-14 md:w-20 md:h-20"
+      >
+        <img src="../../assets/icons/time-forward.svg" alt="reetaila logo" />
+      </div>
+      <h2 class="text-3xl leading-[1.2]">Track and update in real-time</h2>
+      <p>
+        Monitor stock levels and get instant alerts when inventory is running
+        low.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4 bg-[#2F2F2F] p-8 rounded-2xl">
+      <div
+        class="flex items-center justify-center text-white rounded-full p-3 w-14 h-14 md:w-20 md:h-20"
+      >
+        <img src="../../assets/icons/chart-histogram.svg" alt="reetaila logo" />
+      </div>
+
+      <h2 class="text-3xl">Analyse and optimize</h2>
+      <p>
+        Use insights from inventory reports to improve sales strategies and
+        reduce waste.
+      </p>
+    </div>
+  </div>
+  <div class="flex items-center justify-center m-4">
+    <a routerLink="/pending">
+      <button
+        class="border-2 border-white mt-7 py-4 px-7 rounded-xl text-white sm:text-sm text-xs flex"
+      >
+        Join the Waitlist
+        <span class="pl-2 align-middle sm:pt-3px"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-4 h-auto"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </span>
+      </button>
+    </a>
+  </div>
+</section>
+<app-newsletter></app-newsletter>
+<app-banner></app-banner>
+<app-footer></app-footer>

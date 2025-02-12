@@ -1,0 +1,48 @@
+<section class="body-font bg-image3 w-full h-auto md:px-20 px-4 md:py-16 py-12">
+  <div class="w-full flex mb-10">
+    <div class="md:w-3/12"></div>
+    <div class="md:w-6/12 text-center">
+      <p class="md:text-4xl text-3xl text-white font-semibold">
+        We have a plan for every business and yes,
+        <span class="text-secondary">it’s affordable.</span>
+      </p>
+      <p class="text-center text-white pt-4 mb-6">
+        Get started for as little as N1,200 per month and enjoy world class
+        solutions to propel your business further ahead!
+      </p>
+    </div>
+    <div class="md:w-3/12"></div>
+  </div>
+  <div class="md:flex text-white md:space-x-7 justify-between">
+    <ng-container *ngFor="let sec of [1, 2, 3]">
+      <div
+        class="md:w-1/3 w-full h-auto px-6 pt-10 pb-5 md:mt-0 mt-7 bg-primary rounded-xl blur-[6px]"
+      >
+        <div class="w-3/5 mb-6">
+          <p class="text-sm md:text-lg">Pricing Plan Title</p>
+          <p class="md:text-3xl text-xl font-semibold pt-1">
+            Pricing Plan Cost
+          </p>
+          <p class="text-gray-400 text-sm pt-2 md:text-base">
+            Pricing Plan Brief Description. Max 2 Lines
+          </p>
+        </div>
+        <hr class="mb-7 opacity-10 bg-gray-300" />
+        <ng-container *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]">
+          <div class="flex text-sm items-center my-2 py-2 gap-2">
+            <app-mark-icon class="w-4 h-4"></app-mark-icon>
+            <p>Pricing Feature</p>
+          </div>
+        </ng-container>
+        <a routerLink="/solutions" class="mr-6 mb-3">
+          <button
+            class="flex justify-center items-center gap-2 border-0 w-full mt-5 py-4 px-6 rounded-lg bg-secondary text-white text-sm"
+          >
+            Join the Waitlist
+            <app-forward-icon></app-forward-icon>
+          </button>
+        </a>
+      </div>
+    </ng-container>
+  </div>
+</section>
