@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
+        sans: ['DM Sans', 'sans-serif'],
       },
       colors: {
         primary: "#1a2342",

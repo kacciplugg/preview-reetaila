@@ -29,8 +29,8 @@
                 "output": "/assets/"
               },
               {
-                "glob": "favicon.ico",
-                "input": "src/",
+                "glob": "reetaila_favicon.png",
+                "input": "src/assets",
                 "output": "/"
               }
             ],
