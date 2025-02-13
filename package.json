@@ -37,6 +37,7 @@
     "@types/dotenv": "^6.1.1",
     "@types/jasmine": "~5.1.0",
     "@types/mongoose": "^5.11.97",
+    "@types/node": "^22.13.2",
     "autoprefixer": "^10.4.20",
     "jasmine-core": "~5.4.0",
     "karma": "~6.4.0",
