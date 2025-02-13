@@ -1,22 +1,25 @@
-import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
-import { isPlatformBrowser } from '@angular/common';
+import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ScrollService {
-  constructor(
-    private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {
-    if (isPlatformBrowser(this.platformId)) {
-      this.router.events
-        .pipe(filter(event => event instanceof NavigationEnd))
-        .subscribe(() => {
-          window.scrollTo(0, 0);
-        });
-    }
+  resetScroll() {
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant',
+      });
+
+      // Fallbacks
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+
+      // Double-check after a small delay
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 50);
+    });
   }
-} 
+}
