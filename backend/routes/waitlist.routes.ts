@@ -4,6 +4,7 @@ import { Waitlist } from '../models/waitlist.model';
 const router = express.Router();
 
 router.post('/waitlist', async (req, res) => {
+  console.log('Received waitlist submission:', req.body);
   try {
     // Check if email already exists
     const existingEntry = await Waitlist.findOne({ email: req.body.email });
