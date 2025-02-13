@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class WaitlistService {
-  private apiUrl = 'https://prereetaila.vercel.app/api'; // Use environment variable in production
+  private apiUrl = 'http://localhost:3000/api';
+  // private apiUrl = 'https://prereetaila.vercel.app/api'; // Use environment variable in production
 
   constructor(private http: HttpClient) {}
 
