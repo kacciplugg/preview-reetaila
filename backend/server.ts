@@ -11,9 +11,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: process.env['ALLOWED_ORIGINS']?.split(',') || [
-      'http://localhost:4200',
-    ],
+    origin: '*', // Temporarily allow all origins for testing
     credentials: true,
   })
 );
