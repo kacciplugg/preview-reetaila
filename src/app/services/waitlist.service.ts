@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class WaitlistService {
-  private apiUrl =
-    'https://prereetaila-x70yjm7hf-kaccipluggs-projects.vercel.app/api';
+  private apiUrl = 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) {}
 
   joinWaitlist(data: any): Observable<any> {
+    console.log('Sending data to server:', data);
     return this.http.post(`${this.apiUrl}/waitlist`, data);
   }
 }
