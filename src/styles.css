@@ -147,3 +147,7 @@ button {
 a {
   cursor: pointer;
 }
+
+.text-5xl {
+  letter-spacing: -0.04em;
+}
