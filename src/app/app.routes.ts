@@ -9,6 +9,7 @@ import { BusinessComponent } from './business/business.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { WaitlistComponent } from './waitlist/waitlist.component';
 import { WaitlistSuccessComponent } from './waitlist-success/waitlist-success.component';
+import { WaitlistEntriesComponent } from './waitlist-entries/waitlist-entries.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ export const routes: Routes = [
   { path: 'inventory', component: InventoryComponent },
   { path: 'waitlist', component: WaitlistComponent },
   { path: 'waitlist-success', component: WaitlistSuccessComponent },
+  { path: 'waitlist-entries', component: WaitlistEntriesComponent },
 ];
 
 @NgModule({

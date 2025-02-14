@@ -39,4 +39,17 @@ router.post('/waitlist', async (req, res) => {
   }
 });
 
+router.get('/waitlist', async (_req, res) => {
+  try {
+    const entries = await Waitlist.find().sort({ createdAt: -1 });
+    return res.status(200).json(entries);
+  } catch (error: unknown) {
+    const err = error as Error;
+    return res.status(500).json({
+      error: 'Failed to fetch waitlist entries',
+      details: err.message,
+    });
+  }
+});
+
 export default router;

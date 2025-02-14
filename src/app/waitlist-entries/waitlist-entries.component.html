@@ -1,0 +1,237 @@
+<app-navbar></app-navbar>
+
+<main class="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-8">
+      <h1 class="md:text-4xl text-2xl font-bold text-primary">
+        Waitlist Entries
+      </h1>
+      <button
+        (click)="exportToCsv()"
+        class="bg-primary text-sm text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+      >
+        Export to CSV
+      </button>
+    </div>
+
+    <!-- Search and Filters -->
+    <div class="mb-6">
+      <input
+        type="text"
+        (input)="onSearch($event)"
+        placeholder="Search by name, business, or email..."
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary md:text-base text-sm"
+      />
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="isLoading" class="flex justify-center items-center py-12">
+      <div
+        class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"
+      ></div>
+    </div>
+
+    <!-- Error State -->
+    <div *ngIf="error" class="bg-red-50 text-red-500 p-4 rounded-lg mb-6">
+      {{ error }}
+    </div>
+
+    <!-- Entries Table -->
+    <div *ngIf="!isLoading && !error">
+      <!-- Table with horizontal scroll -->
+      <div class="overflow-x-auto bg-white rounded-lg shadow">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th
+                *ngFor="
+                  let header of [
+                    'Name',
+                    'Business',
+                    'Email',
+                    'Interests',
+                    'Date'
+                  ]
+                "
+                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                (click)="onSort(header.toLowerCase())"
+              >
+                <div class="flex items-center gap-2">
+                  {{ header }}
+                  <span
+                    *ngIf="sortField === header.toLowerCase()"
+                    class="text-primary"
+                  >
+                    {{ sortDirection === "asc" ? "↑" : "↓" }}
+                  </span>
+                </div>
+              </th>
+              <th
+                class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 text-right"
+              >
+                View
+              </th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200 md:text-base text-sm">
+            <tr *ngFor="let entry of paginatedEntries" class="hover:bg-gray-50">
+              <td class="px-6 py-4">{{ entry.fullName }}</td>
+              <td class="px-6 py-4">{{ entry.businessName }}</td>
+              <td class="px-6 py-4">{{ entry.email }}</td>
+              <td class="px-6 py-4">
+                <div class="flex flex-col md:flex-row md:flex-wrap gap-2">
+                  <span
+                    *ngFor="let interest of entry.interests"
+                    class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 whitespace-nowrap"
+                  >
+                    {{ interest }}
+                  </span>
+                </div>
+              </td>
+              <td class="px-6 py-4">{{ entry.createdAt | date }}</td>
+              <td class="px-6 py-4 text-right">
+                <button
+                  (click)="showEntryDetails(entry)"
+                  class="text-primary hover:text-primary/80"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination (outside scroll container) -->
+      <div class="bg-white border-t border-gray-200">
+        <div class="sm:hidden">
+          <div class="px-4 py-3 flex justify-between gap-2">
+            <button
+              [disabled]="currentPage === 1"
+              (click)="currentPage = currentPage - 1"
+              class="flex-1 inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+            >
+              Previous
+            </button>
+            <button
+              [disabled]="currentPage === totalPages"
+              (click)="currentPage = currentPage + 1"
+              class="flex-1 inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+
+        <!-- Desktop pagination remains unchanged -->
+        <div
+          class="hidden sm:flex sm:px-6 sm:py-3 sm:items-center sm:justify-between"
+        >
+          <div>
+            <p class="text-sm text-gray-700">
+              Showing
+              <span class="font-medium">{{
+                (currentPage - 1) * pageSize + 1
+              }}</span>
+              to
+              <span class="font-medium">
+                {{ Math.min(currentPage * pageSize, filteredEntries.length) }}
+              </span>
+              of
+              <span class="font-medium">{{ filteredEntries.length }}</span>
+              results
+            </p>
+          </div>
+          <div>
+            <nav
+              class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+            >
+              <button
+                *ngFor="let page of [].constructor(totalPages); let i = index"
+                (click)="currentPage = i + 1"
+                [class.bg-primary]="currentPage === i + 1"
+                [class.text-white]="currentPage === i + 1"
+                class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                {{ i + 1 }}
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entry Details Modal -->
+  <div
+    *ngIf="selectedEntry"
+    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 md:mt-12 mt-[-20px]"
+  >
+    <div class="bg-white rounded-lg max-w-2xl w-full p-6">
+      <div class="flex justify-between items-start mb-4">
+        <h2 class="text-2xl font-bold text-primary">Entry Details</h2>
+        <button
+          (click)="closeEntryDetails()"
+          class="text-gray-500 hover:text-gray-700"
+        >
+          ✕
+        </button>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-sm font-medium text-gray-500">Full Name</h3>
+          <p class="mt-1">{{ selectedEntry.fullName }}</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-medium text-gray-500">Business Name</h3>
+          <p class="mt-1">{{ selectedEntry.businessName }}</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-medium text-gray-500">Email</h3>
+          <p class="mt-1">{{ selectedEntry.email }}</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-medium text-gray-500">Interests</h3>
+          <div class="mt-1 flex flex-wrap gap-2">
+            <span
+              *ngFor="let interest of selectedEntry.interests"
+              class="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+            >
+              {{ interest }}
+            </span>
+          </div>
+        </div>
+        <div *ngIf="selectedEntry.additionalInfo">
+          <h3 class="text-sm font-medium text-gray-500">
+            Additional Information
+          </h3>
+          <p class="mt-1">{{ selectedEntry.additionalInfo }}</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-medium text-gray-500">Submission Date</h3>
+          <p class="mt-1">{{ selectedEntry.createdAt | date : "medium" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>
